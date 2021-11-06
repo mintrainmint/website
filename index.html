@@ -3,12 +3,31 @@
     <head>
     	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     	<title>mint rain</title>
-	    <link rel="icon" href="favicon.ico" type="image/x-icon">
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico?">
       <link rel="stylesheet" type="text/css" href="main.css">
     </head>
     <body class="bg wrap">
-        <div id="wrapper">
-            <footer class="oswald-font">&copy; Copyright 2021, mint rain.</footer>
-        </div>
+      <div class="preloader">
+        <img src="loading.gif" alt="loading" width="100" height="100">
+      </div>
+      <script>
+        const preloader = document.querySelector('.preloader');
+        const fadeEffect = setInterval(() => {
+          // if we don't set opacity 1 in CSS, then
+          // it will be "" -- that's why
+          // we check it, and if so, set opacity to 1
+          if (!preloader.style.opacity) {
+            preloader.style.opacity = 1;
+          }
+          if (preloader.style.opacity > 0) {
+            preloader.style.opacity -= 0.1;
+          } else {
+            clearInterval(fadeEffect);
+          }
+        }, 100);
+        window.addEventListener('load', fadeEffect);
+      </script>
+      <div id="wrapper">
+      </div>
     </body>
 </html>
