@@ -13,15 +13,11 @@ footer {
     color: #000000;
     display:none;
 }
-#wrapper {
-    margin-left: 10px;
-    color: #FFFFFF;
-}
 body, html {
   height: 100%;
 }
 .bg {
-  background-image: url("flow.gif");
+  background-image: url("11.15.2021.gif");
 
   /* Full height */
   height: 100%;
@@ -49,4 +45,16 @@ body, html {
   opacity: 1;
   transform: opacity 1s linear;
   pointer-events: none;
+}
+.bid_button {
+  /* display: flex; */
+  display: none;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  opacity: 1;
 }
