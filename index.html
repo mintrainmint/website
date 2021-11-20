@@ -10,6 +10,9 @@
       <div class="preloader">
         <img src="loading.gif" alt="loading" width="100" height="100">
       </div>
+      <video autoplay muted loop id="myVideo">
+        <source src="11_20_2021.mp4" type="video/mp4">
+      </video>
       <script>
         const preloader = document.querySelector('.preloader');
         const fadeEffect = setInterval(() => {
@@ -27,8 +30,12 @@
         }, 100);
         window.addEventListener('load', fadeEffect);
       </script>
-      <a class="bid_button" href="https://mintrain.holaplex.com/" target="_blank">
-        <img alt="bid" src="bid.png" width="50">
-      </a>
+      <div class="container-button">
+        <div class="center-button">
+          <a class="bid_button" href="https://mintrain.holaplex.com/" target="_blank">
+            <img alt="bid" src="bid.png" width="55">
+          </a>
+        </div>
+      </div>
     </body>
 </html>
